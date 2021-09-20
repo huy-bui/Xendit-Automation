@@ -15,7 +15,7 @@ public class DeveloperPage extends BasePage{
 	}
 	
 	public void clickGenerateSerectKeyButton() {
-//		moveToElement(DeveloperPageUI.GENERATE_SECRET_KEY_BUTTON);
+		actionMoveToElement(DeveloperPageUI.GENERATE_SECRET_KEY_BUTTON);
 		clickToElement(DeveloperPageUI.GENERATE_SECRET_KEY_BUTTON);
 	}
 	
@@ -61,6 +61,35 @@ public class DeveloperPage extends BasePage{
 	public boolean isApiKeyDisplayedInList(String apiKeyName) {
 		String apiKeyNameElement = String.format(DeveloperPageUI.API_KEY_NAME_IN_LIST, apiKeyName);
 		return isElementDisplayed(By.xpath(apiKeyNameElement));
+	}
+	
+	public void clickEditApiKeyButton(String apiKeyName) {
+		String editApiKeyElement = String.format(DeveloperPageUI.EDIT_API_KEY, apiKeyName);
+		clickToElement(By.xpath(editApiKeyElement));
+	}
+	
+	public void clickApplyChangeButton() {
+		moveToElement(DeveloperPageUI.APPLY_CHANGE_BUTTON);
+		clickToElement(DeveloperPageUI.APPLY_CHANGE_BUTTON);
+	}
+	
+	public void clickOkayButton() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		clickToElement(DeveloperPageUI.OKAY_BUTTON);
+	}
+	
+	public String getPermissionText(String apiKeyName) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		String apiPermissionTextElement = String.format(DeveloperPageUI.API_PERMISSION, apiKeyName);
+		return getElementText(By.xpath(apiPermissionTextElement));
 	}
 	
 }

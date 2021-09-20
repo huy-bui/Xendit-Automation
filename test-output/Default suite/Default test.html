@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Sep 18 14:37:32 ICT 2021</td>
+<td>Started on:</td><td>Mon Sep 20 09:28:34 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>304 seconds (304052 ms)</td>
+<tr><td>Total time:</td><td>126 seconds (126090 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Account.Create_Virtaul_Account_Test.openBrowserAndSignIn()'><b>openBrowserAndSignIn</b><br>Test class: testcases.Account.Create_Virtaul_Account_Test</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 298.388
+<td title='testcases_UIs.Account.Generate_API_Secrect_Key_Test.openBrowserAndSignIn()'><b>openBrowserAndSignIn</b><br>Test class: testcases_UIs.Account.Generate_API_Secrect_Key_Test</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=93.0.4577.82)
   (Driver info: chromedriver=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}),platform=Mac OS X 11.2.3 arm64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 300.01 seconds
+Command duration or timeout: 5 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
 System info: host: &apos;Trangs-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53125}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.RftWex}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 2c2a64709cb79fccf76c34b02263f7ea
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52115}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.lSIKgt}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: ca700b71c4bc591b6e29d1bf9631ff9b
+*** Element info: {Using=xpath, value=//input[@name=&quot;email&quot;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -93,8 +95,15 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at commons.BaseTest.openBrowserAndSignIn(BaseTest.java:44)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at commons.BasePage.findElement(BasePage.java:129)
+	at commons.BasePage.sendKeysToElement(BasePage.java:141)
+	at pageObjects.SignInPage.inputEmail(SignInPage.java:18)
+	at pageObjects.SignInPage.signIn(SignInPage.java:31)
+	at commons.BaseTest.openBrowserAndSignIn(BaseTest.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,16 +126,18 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1041326823", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1041326823'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 298.388
+</pre></div><a href='#' onClick='toggleBox("stack-trace1613332278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1613332278'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=93.0.4577.82)
   (Driver info: chromedriver=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}),platform=Mac OS X 11.2.3 arm64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 300.01 seconds
+Command duration or timeout: 5 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
 System info: host: &apos;Trangs-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53125}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.RftWex}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 2c2a64709cb79fccf76c34b02263f7ea
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52115}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.lSIKgt}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: ca700b71c4bc591b6e29d1bf9631ff9b
+*** Element info: {Using=xpath, value=//input[@name=&quot;email&quot;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -135,8 +146,15 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at commons.BaseTest.openBrowserAndSignIn(BaseTest.java:44)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at commons.BasePage.findElement(BasePage.java:129)
+	at commons.BasePage.sendKeysToElement(BasePage.java:141)
+	at pageObjects.SignInPage.inputEmail(SignInPage.java:18)
+	at pageObjects.SignInPage.signIn(SignInPage.java:31)
+	at commons.BaseTest.openBrowserAndSignIn(BaseTest.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -171,7 +189,7 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Account.Create_Virtaul_Account_Test.closeBrowser()'><b>closeBrowser</b><br>Test class: testcases.Account.Create_Virtaul_Account_Test</td>
+<td title='testcases_UIs.Account.Generate_API_Secrect_Key_Test.closeBrowser()'><b>closeBrowser</b><br>Test class: testcases_UIs.Account.Generate_API_Secrect_Key_Test</td>
 <td></td>
 <td>0</td>
 <td>null</td></tr>
@@ -184,10 +202,10 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Account.Create_Virtaul_Account_Test.Create_Virtual_Account()'><b>Create_Virtual_Account</b><br>Test class: testcases.Account.Create_Virtaul_Account_Test</td>
+<td title='testcases_UIs.Account.Generate_API_Secrect_Key_Test.Generate_Api_Key()'><b>Generate_Api_Key</b><br>Test class: testcases_UIs.Account.Generate_API_Secrect_Key_Test</td>
 <td></td>
 <td>0</td>
-<td>testcases.Account.Create_Virtaul_Account_Test@6ee4d9ab</td></tr>
+<td>testcases_UIs.Account.Generate_API_Secrect_Key_Test@5a5338df</td></tr>
 </table><p>
 </body>
 </html>

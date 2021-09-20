@@ -3,12 +3,12 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="testcases.Account.Create_Virtaul_Account_Test">
+      <class name="testcases_UIs.Account.Generate_API_Secrect_Key_Test">
         <methods>
-          <include name="Create_Virtual_Account"/>
+          <include name="Generate_Api_Key"/>
           <include name="openBrowserAndSignIn"/>
         </methods>
-      </class> <!-- testcases.Account.Create_Virtaul_Account_Test -->
+      </class> <!-- testcases_UIs.Account.Generate_API_Secrect_Key_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

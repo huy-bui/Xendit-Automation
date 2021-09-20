@@ -277,11 +277,16 @@ public class BasePage {
 		WebElement element = findElement(locator);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+	}
+	
+	public void actionMoveToElement(By locator) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(findElement(locator)).perform();
 	}
 
 	private Alert alert;

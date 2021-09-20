@@ -2,6 +2,7 @@ package utils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.HashMap;
@@ -32,8 +33,14 @@ public class ConvertUtils {
 		System.out.println("Current Date: " + ft.format(militime));
 		return ft.format(militime);
 	}
+	
+	public static long getEpochMilisecond() {
+		long ut1 = Instant.now().getEpochSecond();
+		return ut1;
+	}
 
-//	public static void main(String arg[]) {
-//		getCurrentDateTime();
-//	}
+//    public static void main(String args[]) {
+//    	getDateTime(0);
+//    	getEpochMilisecond();
+//    }
 }

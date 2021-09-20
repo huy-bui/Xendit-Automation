@@ -1,19 +1,19 @@
-package testcases.Account;
+package testcases_UIs.Account;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import api.RequestBuilder;
 import commons.BaseTest;
 import commons.Constants;
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import pageObjects.CallBacksPage;
 import pageObjects.DeveloperPage;
+import utils.ConvertUtils;
 
-public class Create_Virtaul_Account_Test extends BaseTest {
+public class Create_Virtaul_Account_E2ETest extends BaseTest {
 
 	DeveloperPage developerPage;
 	CallBacksPage callBacksPage;
@@ -24,7 +24,8 @@ public class Create_Virtaul_Account_Test extends BaseTest {
 		homePage.clickSettingsTab();
 		developerPage = homePage.clickAPIKeyLink();
 		developerPage.clickGenerateSerectKeyButton();
-		developerPage.inputApiKeyName("TestName123");
+		String apiKeyName = String.valueOf(ConvertUtils.getEpochMilisecond());
+		developerPage.inputApiKeyName(apiKeyName);
 		developerPage.selectProductPermission(Constants.MONEY_IN_PRODUCT, Constants.WRITE);
 		developerPage.selectProductPermission(Constants.MONEY_OUT_PRODUCT, Constants.WRITE);
 		developerPage.selectProductPermission(Constants.xenPlatform, Constants.WRITE);
@@ -40,21 +41,17 @@ public class Create_Virtaul_Account_Test extends BaseTest {
 		developerPage.clickCloseButton();
 		
 		// Verify the API Secret Key displays in the list
-		Assert.assertTrue(developerPage.isApiKeyDisplayedInList("TestName123"), "API secret key does NOT displayed!");
+		Assert.assertTrue(developerPage.isApiKeyDisplayedInList(apiKeyName), "API secret key does NOT displayed!");
 		
 		// Send API to create virtual account
-		RequestSpecification request = RestAssured.given()
-				.baseUri("https://api.xendit.co")
-				.auth().preemptive().basic(apiSecretKey, "")
-				.contentType("application/x-www-form-urlencoded; charset=utf-8")
-				.formParam("external_id", "demo_virtual_account_1475459775872")
-				.formParam("bank_code", "BNI")
-				.formParam("name", "Huy ABC");
-		Response response = request.post("callback_virtual_accounts");
-		int statusCode = response.statusCode();
+		RequestBuilder requestBuilder = new RequestBuilder();
+		String externalId = "demo_virtual_account";
+		String bankCode = "BNI";
+		String name = "Michael Huy";
+		Response response = requestBuilder.postToCreateVirtualAccount(apiSecretKey, externalId, bankCode, name);
+		int statusCode = response.getStatusCode();
+		Assert.assertEquals(statusCode, 200, "Status code returns: " + statusCode);
 		JsonPath body = response.jsonPath();
-		
-		Assert.assertEquals(statusCode, 200, "Send API failed, status code returns: " + statusCode);
 		String productId = body.get("id");
 		
 		// Verify the virtual account in CallBacks screen

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API and UI Tests">
+
+	<test name="Run all APIs tests">
+		<classes>
+			<class name="testcases_apis.API_Create_Virtual_Account" />
+		</classes>
+	</test>
+
+	<test name="Run all UI tests">
+		<classes>
+			<class name="testcases_UIs.Account.Generate_API_Secrect_Key_Test" />
+			<!-- <class name="testcases_UIs.Account.Modify_API_Key_Test" /> -->
+			<class name="testcases_UIs.Account.Create_Virtaul_Account_E2ETest" />
+		</classes>
+	</test>
+
+</suite> 

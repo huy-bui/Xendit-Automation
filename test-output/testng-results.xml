@@ -2,34 +2,38 @@
 <testng-results total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-18T07:37:32Z" name="Default suite" finished-at="2021-09-18T07:42:36Z" duration-ms="304052">
+  <suite started-at="2021-09-20T02:28:34Z" name="Default suite" finished-at="2021-09-20T02:30:40Z" duration-ms="126090">
     <groups>
     </groups>
-    <test started-at="2021-09-18T07:37:32Z" name="Default test" finished-at="2021-09-18T07:42:36Z" duration-ms="304052">
-      <class name="testcases.Account.Create_Virtaul_Account_Test">
-        <test-method is-config="true" signature="openBrowserAndSignIn()[pri:0, instance:testcases.Account.Create_Virtaul_Account_Test@6ee4d9ab]" started-at="2021-09-18T14:37:32Z" name="openBrowserAndSignIn" finished-at="2021-09-18T14:37:32Z" duration-ms="0" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+    <test started-at="2021-09-20T02:28:34Z" name="Default test" finished-at="2021-09-20T02:30:40Z" duration-ms="126090">
+      <class name="testcases_UIs.Account.Generate_API_Secrect_Key_Test">
+        <test-method is-config="true" signature="openBrowserAndSignIn()[pri:0, instance:testcases_UIs.Account.Generate_API_Secrect_Key_Test@5a5338df]" started-at="2021-09-20T09:28:34Z" name="openBrowserAndSignIn" finished-at="2021-09-20T09:28:34Z" duration-ms="0" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 298.388
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=93.0.4577.82)
   (Driver info: chromedriver=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}),platform=Mac OS X 11.2.3 arm64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 300.01 seconds
+Command duration or timeout: 5 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
 System info: host: 'Trangs-MacBook-Pro.local', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53125}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.RftWex}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 2c2a64709cb79fccf76c34b02263f7ea]]>
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52115}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.lSIKgt}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: ca700b71c4bc591b6e29d1bf9631ff9b
+*** Element info: {Using=xpath, value=//input[@name="email"]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 298.388
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=93.0.4577.82)
   (Driver info: chromedriver=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}),platform=Mac OS X 11.2.3 arm64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 300.01 seconds
+Command duration or timeout: 5 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
 System info: host: 'Trangs-MacBook-Pro.local', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53125}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.RftWex}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 2c2a64709cb79fccf76c34b02263f7ea
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52115}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}), userDataDir=/var/folders/xk/5fjgmb7d2r90gd86km1fqb7r0000gn/T/.com.google.Chrome.lSIKgt}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=93.0.4577.82, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: ca700b71c4bc591b6e29d1bf9631ff9b
+*** Element info: {Using=xpath, value=//input[@name="email"]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -38,8 +42,15 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at commons.BaseTest.openBrowserAndSignIn(BaseTest.java:44)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at commons.BasePage.findElement(BasePage.java:129)
+	at commons.BasePage.sendKeysToElement(BasePage.java:141)
+	at pageObjects.SignInPage.inputEmail(SignInPage.java:18)
+	at pageObjects.SignInPage.signIn(SignInPage.java:31)
+	at commons.BaseTest.openBrowserAndSignIn(BaseTest.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,19 +75,19 @@ Session ID: 2c2a64709cb79fccf76c34b02263f7ea
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserAndSignIn -->
-        <test-method signature="Create_Virtual_Account()[pri:0, instance:testcases.Account.Create_Virtaul_Account_Test@6ee4d9ab]" started-at="2021-09-18T14:42:36Z" name="Create_Virtual_Account" finished-at="2021-09-18T14:42:36Z" duration-ms="2" status="SKIP">
+        <test-method signature="Generate_Api_Key()[pri:0, instance:testcases_UIs.Account.Generate_API_Secrect_Key_Test@5a5338df]" started-at="2021-09-20T09:30:40Z" name="Generate_Api_Key" finished-at="2021-09-20T09:30:40Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Create_Virtual_Account -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.Account.Create_Virtaul_Account_Test@6ee4d9ab]" started-at="2021-09-18T14:42:36Z" name="closeBrowser" finished-at="2021-09-18T14:42:36Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- Generate_Api_Key -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases_UIs.Account.Generate_API_Secrect_Key_Test@5a5338df]" started-at="2021-09-20T09:30:40Z" name="closeBrowser" finished-at="2021-09-20T09:30:40Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testcases.Account.Create_Virtaul_Account_Test -->
+      </class> <!-- testcases_UIs.Account.Generate_API_Secrect_Key_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

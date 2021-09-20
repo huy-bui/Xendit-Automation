@@ -8,19 +8,20 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -30,5 +31,15 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/selenium-webdriver-java-testng/library/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="/Users/trangmy/.m2/repository/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar" sourcepath="/Users/trangmy/.m2/repository/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="io.rest-assured"/>
+			<attribute name="maven.artifactId" value="rest-assured"/>
+			<attribute name="maven.version" value="4.3.3"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

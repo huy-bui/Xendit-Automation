@@ -1,5 +1,7 @@
 package commons;
 
+import groovyjarjarantlr4.v4.parse.ANTLRParser.finallyClause_return;
+
 public class Constants {
 	
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
@@ -14,4 +16,5 @@ public class Constants {
 	public static final String NONE = "None";
 	public static final String READ = "Read";
 	public static final String WRITE = "Write";
+	public static final String API_SECRET_KEY = "xnd_development_8hO8DAfSbH7Emr8BTkxBaKyGFOisfWv9smkuW38NmDb4yoQBLho6qlw3sP3N";
 }
